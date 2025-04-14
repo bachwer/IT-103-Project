@@ -1,0 +1,371 @@
+
+.contentFoods{
+    display: flex;
+    border: 1px solid #EEEEEE;
+    width: 97%;
+    margin: 16px auto auto;
+    padding: 10px;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.contentFoods:hover{
+    background-color: #f6f5f5;
+}
+
+.titleBarFood{
+    font-size: 13px;
+    color: #676A6C;
+
+
+}
+.BoxParameterFoods{
+   padding-right: 0;
+
+}
+.descriptionFood{
+    font-size: 12px;
+    color: #676A6C;
+    font-weight: lighter;
+}
+
+.BoxParameterFoods .c{
+    font-size: 12px;
+    color: #676A6C;
+    font-weight: lighter;
+    text-align: center;
+
+}
+.BoxParameterFoods .a{
+    font-size: 12px;
+    font-weight: normal;
+    color: #676A6C;
+
+}
+body{
+    background-color: #676A6C;
+}
+.MainFoods{
+    position: absolute;
+    top: 192px;
+    left: calc(100% - 95%);
+    width:90%;
+}
+.MainFoodsPage{
+    background-color: #ffff;
+    height: 1000px;
+    border-radius: 15px;
+    padding: 20px 20px;
+
+}
+.CreateFood{
+    padding-left: 4px;
+    color: #888888;
+    display: flex;
+    gap: 18px;
+    font-size: 14px;
+    height: 36px;
+    align-items: center;
+
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fff;
+    margin: 2% auto;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 900px;
+    position: relative;
+}
+.modal-content .close{
+    position: absolute;
+    color: #888888;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+
+}
+
+/* Header của modal */
+.modal-header {
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 80%;
+}
+
+.modal-header p{
+    color: #676A6C;
+    font-size: 13px;
+}
+
+
+
+
+
+.modal-title {
+    font-size: 28px;
+    font-weight: normal;
+    color: #676A6C;
+
+}
+
+/* Nút đóng modal */
+.close {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Body của modal */
+.modal-body {
+
+    padding: 15px 30px;
+
+}
+
+/* Footer của modal */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+}
+.foodName{
+    display: flex;
+}
+.foodInfo{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7px;
+}
+
+.foodInfo button{
+    border: 1px solid #EEEEEE;
+    color: #676A6C;
+    width: 140px;
+    height: 42px;
+    background-color: #FAFAFB;
+    text-align: start;
+
+
+}
+.Nutrition{
+    display: flex;
+    margin-top: 25px;
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+
+}
+.Nutrition span{
+    color: #1AB394;
+    font-size: 13px;
+    font-weight: 400;
+
+}
+.NutritionTitle span{
+    font-weight: lighter;
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+
+}
+
+
+
+.NutritionValue input{
+    width: 94px;
+    background-color: #EEEEEE;
+    display: inline;
+    border: 1px solid #EEEEEE;
+    border-top: none;
+    border-bottom: none;
+}
+
+.NutritionValue button{
+    width: 119px;
+    height: 52px;
+    border: none;
+    background-color: #FAFAFB;
+    text-align: start;
+}
+.foodInfo input{
+    border: none;
+    color: #676A6C;
+    width: 325px;
+    height: 40px;
+    background-color: #EEEEEE;
+}
+
+.foodInfo select {
+    border: none;
+    color: #676A6C;
+    width: 330px;
+    font-size: 14px;
+    background-color: #EEEEEE;
+    padding: 8px 15px;
+    border-top: 1px solid rgb(221, 221, 221);
+    border-right: 1px solid rgb(221, 221, 221);
+    border-bottom: 1px solid rgb(221, 221, 221);
+    border-image: initial;
+    height: calc(100% - 1px) !important;
+}
+
+
+.Cholesterol1{
+    width: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FAFAFB;
+    color: #676A6C;
+    font-size: 13px;
+}
+#source{
+    width: 186px
+}
+#quantity{
+    width: 98px;
+    height: 38px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+}
+.btnFake{
+    border: 1px solid #DDDDDD;
+    border-left: none;
+    padding: 11px 33px 11px 12px;
+    font-size: 13px;
+    color: #676A6C;
+
+}
+/* Các nút trong footer */
+.btn-close, .btn-save {
+    padding: 10px 15px;
+    border: none;
+    background-color: #1AB394; /* Màu xanh cho Save */
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 19px
+}
+
+
+.btn-close {
+    background-color: #ffff;
+    color: #676A6C;
+    border:1px solid #EEEEEE;
+}
+
+.btn-close:hover{
+    background-color: #faf2f2;
+}
+.btn-save:hover {
+    background-color: #1b8f77;
+}
+
+
+.modal.show {
+    display: block;
+    overflow-y: auto; /* Hiển thị thanh cuộn nếu nội dung vượt quá */
+
+}
+
+.NutritionValue{
+    display: flex;
+    height: 52px;
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    margin: 0;
+
+
+}
+#NutritionContent2{
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.button{
+    width: 112px;
+    height: 52px;
+    border: none;
+    background-color: #ffffff;
+    text-align: start;
+}
+.NutritionValue1{
+    display: flex;
+    height: 42px;
+    border: 1px solid #DDDDDD;
+    width: 48%;
+    margin-bottom: 7px;
+
+}
+.NutritionValue1 button{
+    border: none;
+    width: 40%;
+    background-color: #FAFAFB;
+    border-right: 1px solid #DDDDDD;
+    text-align: start;
+}
+.NutritionValue1 input{
+    border: none;
+    width: 60%;
+    text-indent: 15px;
+    background-color: #EEEEEE;
+    border-right: 1px solid #DDDDDD;
+
+}
+.Macronutrients{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+
+}
+.foodName input{
+    text-indent: 15px;
+
+}
+.NutritionValue input{
+    text-indent: 15px;
+}
+
+.inputBackground{
+    background-color: #FFF;
+    border: 1px solid #DDDDDD;
+}
+
+#CategoryReceipt{
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    width: 20%;
+    height: 34px;
+    box-sizing: border-box;
+    padding-left: 15px;
+    color:#999999;
+
+}

@@ -1,0 +1,409 @@
+* {
+    font-family: "Open Sans", sans-serif;
+}
+#AllListMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.show{
+    display: block;
+
+}
+
+
+
+#menuList {
+    transition: transform 0.5s ease-in-out, margin-left 0.5s ease-in-out;
+}
+
+.activeMenuList {
+    transform: translateX(50px);
+    margin-left: 180px;
+}
+
+.MainHome{
+    position: absolute;
+    top: 192px;
+    left: calc(100% - 95%);
+    width:90%;
+}
+
+.MainHomePage{
+    background-color: #ffff;
+    height: 1259px;
+    border-radius: 15px;
+    padding: 20px 20px;
+
+}
+.FooterHomePage{
+    margin-top: 150px;
+}
+
+.titleMainPage1{
+    font-size: 20px;
+    color: #676A6C;
+}
+.titleMainPage2{
+    color: #888888;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+
+
+.Search_sort{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+#search{
+    width: 55%;
+    height: 34px;
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+}
+#search:hover{
+    background-color: #f8f5f5;
+}
+#Sort:hover{
+    background-color: #f8f5f5;
+}
+
+#Sort{
+    width: 200px;
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    color: #999999;
+    cursor: pointer;
+    border-left: none;
+
+}
+.btn-sort{
+    width:36px;
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    cursor: pointer;
+
+}
+.flex{
+    display: flex;
+    width: 20%;
+    position: relative;
+}
+#Category{
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    width: 20%;
+    height: 34px;
+    box-sizing: border-box;
+    padding-left: 15px;
+    color:#999999;
+
+}
+select {
+    padding-right: 30px;  /* Tạo khoảng trống cho mũi tên */
+    appearance: none;  /* Ẩn kiểu mặc định của trình duyệt */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="black" d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Mũi tên bên phải */
+    background-size: 16px;
+}
+
+#Category:hover{
+    background-color: #f8f5f5;
+}
+
+
+#search::placeholder {
+    padding-left: 13px;
+}
+.flex:hover img {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 120px;
+}
+
+.dropdown button {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    background: white;
+    cursor: pointer;
+}
+.dropdown button:hover {
+    background: #f0f0f0;
+    z-index: 999999;
+}
+
+.flex:hover .dropdown {
+    z-index: 999999;
+    display: block;
+}
+
+.contentHomePage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+
+}
+.contentBox{
+    width: 45%;
+    border: 1px solid #EEEEEE;
+    height: 220px;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 30px;
+}
+.contentBox:hover{
+    border: 1px solid #1AB394;
+    cursor: pointer;
+}
+
+.titleBar{
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 28px;
+    width: 28%;
+    gap: 2px;
+    align-items: center;
+    padding-left: 10px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2),
+    -2px -2px 4px rgba(255, 255, 255, 0.4);
+    z-index: 9999;
+    background: #fff;
+    cursor: pointer;
+
+}
+.titleBar span{
+    font-size: 11px;
+    color: #EA9F77;
+    font-weight: bold;
+
+}
+
+.titleBar2{
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 28px;
+    width: 20%;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2),
+    -2px -2px 4px rgba(255, 255, 255, 0.4);
+    z-index: 9999;
+    background: #fff;
+    cursor: pointer;
+
+}
+.titleBar2 span{
+    font-size: 11px;
+    color: #2BA0CC;
+    font-weight: bold;
+
+}
+
+
+
+
+
+
+
+
+.titleBar1{
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    padding-left: 40%;
+    width: 200px;
+
+}
+.boxTitleBar img{
+    position: absolute;
+    height: 165px;
+    width: 165px;
+    top: 48px;
+    left: 15px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.boxTitleBar {
+    overflow: hidden; /* Ngăn ảnh bị tràn khi phóng to */
+}
+
+.boxTitleBar img {
+    width: 165px;
+    height: 165px;
+    object-fit: cover; /* Giúp ảnh không bị méo khi zoom */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.boxTitleBar img:hover {
+    transform: scale(1.1); /* Zoom nhẹ nhưng giữ nguyên khung */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+.titleBar1 span{
+    font-size: 13px;
+    font-weight: normal;
+    color: #676A6C;
+    padding-left: 10px;
+}
+.titleBar1 button{
+    position: absolute;
+    right: 20px;
+    top: 80px;
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 60px;
+    height: 28px;
+    color: #AAAAAA;
+    transition: transform 0.1s ease, background-color 0.2s ease, color 0.2s ease;
+    z-index: 999999;
+}
+.titleBar1 button:hover{
+    background-color: #f6f2f2;
+}
+.titleBar1 button:active {
+    transform: scale(1.2);
+    background-color: #ff0000;
+    color: white;
+    opacity: 0.8;
+}
+.titleBar1Btn{
+    background-color: #ff0000;
+    color: white;
+    opacity: 0.8;
+}
+
+
+.text-btnInBar2{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.parameterFoods{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 54px;
+    width: 60%;
+    border-top: 1px solid #EEEEEE;
+    display: flex;
+    justify-content: center;
+
+
+
+}
+.parameterFoods span{
+    font-size: 11px;
+    color:#282828;
+}
+
+.parameterFoods .a{
+    font-size: 11px;
+    color: #888888;
+}
+.parameterFoods .b{
+    font-size: 11px;
+    color: #888888;
+}
+.parameterFoods .c{
+    text-align: center;
+}
+.BoxParameterFoods{
+    display: flex;
+    gap: 15px;
+}
+.Pagination{
+    position: absolute;
+    margin-top: 100px;
+    right: 40px;
+    bottom: 180px;
+    display: flex;
+
+
+}
+.activeBtn{
+    background-color: #F4F4F4;
+    border: 1px solid #DDDDDD;
+    border-radius: 1px;
+    padding: 5px;
+    font-size: 13px;
+
+}
+.disabled{
+    background-color: #e4e3e3;
+    border: 1px solid #DDDDDD;
+    border-radius: 1px;
+    font-size: 13px;
+    padding: 5px;
+}
+.btn-Page{
+    background-color: #ffff;
+    border: 1px solid #DDDDDD;
+    border-radius: 1px;
+    padding: 5px;
+    font-size: 13px;
+
+}
+.btn-Page:hover{
+    background-color: #F4F4F4;
+}
+.backBtn{
+    background-color: red;
+}
+.text-btnInBar1{
+    display: flex;
+    align-items: center;
+}
+.btnCommunity{
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+    color: #E08E6D;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.btnCommunity:hover{
+    color: #ec8f6a;
+    background-color: #f4f0f0;
+}

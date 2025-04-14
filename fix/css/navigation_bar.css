@@ -1,0 +1,341 @@
+* {
+    font-family: "Open Sans", sans-serif;
+}
+/*#AllListMenu {*/
+/*    width: 0;*/
+/*    overflow: hidden;*/
+/*    transition: width 0.6s ease-out, opacity 0.6s ease-out;*/
+/*    opacity: 0;*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*    height: 100%;*/
+/*}*/
+
+/*#AllListMenu.show {*/
+/*    opacity: 1;*/
+/*}*/
+
+.navigation_bar {
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999
+}
+
+.navigation_bar_logo {
+    display: flex;
+    height: 156px;
+    align-items: center;
+    justify-content: center;
+    background-color: #293846;
+}
+
+.navigation_bar_logo img {
+    width: 190px;
+    height: 44px;
+}
+
+.menu {
+    display: flex;
+    width: 100%;
+    background-color: #2F4250;
+    height: 50px;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+}
+.active{
+    background-color: #293846;
+}
+.menu:hover {
+    background-color: #293846;
+}
+.menu span{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.active span {
+    color: #FFFFFF;
+}
+
+.bar_menu {
+    width: 100%;
+    height: 50px;
+    color: #A7B1C2;
+    background-color: #2F4050;
+}
+
+.circle {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.active .circle {
+    background-color: #1AB394;
+}
+.active .circle i{
+    color: #FFFFFF;
+}
+.active .circle img {
+    filter: invert(1) brightness(1000%);
+}
+
+.circle {
+    background-color: #445362;
+}
+
+.circle i, .circle img {
+    height: 18px;
+
+}
+
+
+
+.footer-menu {
+    width: 100%;
+    height: calc(100vh - 206px - 150px);
+    background-color: #2F4250;
+    position: relative;
+}
+
+.bar_menu:hover {
+    background-color: #293846;
+}
+.header-bar{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    height: 76px;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+.container-header{
+    display: flex;
+    background-color: #293846;
+    width: 100%;
+}
+body{
+    background-color: #F3F3F4;
+}
+
+.btn-list button{
+    background-color: #1AB394;
+    border: none;
+    padding: 6px 11px 4px 11px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.btn-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+.userText{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.userText span{
+    font-size: 16px;
+    color:#888888;
+    padding-bottom: 4px;
+}
+.btn-list button:hover{
+    background-color: #178f77;
+}
+.footer-menu .menu{
+    position: absolute;
+    align-items: center;
+    left:0;
+    top: 100%;
+    width: calc(100% - 20px);
+    background-color: #12896D;
+    padding-left: 20px;
+    color: #FFFFFF;
+
+}
+.footer-menu .menu:hover{
+    background-color: #0e6c56;
+    cursor: pointer;
+}
+
+.NamePage{
+
+    position: absolute;
+    top: 77px;
+    left: 0;
+    height: 76px;
+    width: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+
+}
+.titlePage{
+    font-size: 24px;
+    font-weight: 300;
+    color: #676A6C;
+    padding-left: 20px;
+    padding-top:20px;
+}
+.descriptionPage{
+    font-size: 13px;
+    font-weight: 300;
+    color: #888888;
+    padding-left: 20px;
+}
+
+
+.boxMagic{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #1AB394;
+    border: none;
+    padding: 10px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    animation: floatUpDown 2s ease-in-out infinite;
+    z-index: 9999;
+
+}
+.boxMagic:hover{
+    border: 1px solid #19957c;
+
+}
+
+/* Hiệu ứng lên xuống */
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Cửa sổ chat */
+.chat-box {
+    display: none; /* Mặc định ẩn */
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 250px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    animation: fadeIn 0.3s ease-in-out;
+
+}
+.chat-box.show {
+    display: block ; /* Đảm bảo chat hiển thị khi nhấn */
+    z-index: 999999999999;
+}
+
+/* Header chat */
+.chat-header {
+    background: #1AB394;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.chat-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Nội dung chat */
+.chat-content {
+    max-height: 200px;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Ô nhập tin nhắn */
+.chat-footer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.chat-footer input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.chat-footer button {
+    background: #1AB394;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-footer button:hover {
+    background: #178f77;
+}
+
+/* Hiệu ứng mở chat */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.logo1{
+    height: 10px;
+}
+#imgLogo2{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.imgAvatar{
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/*!* 🎩 Hiệu ứng khi hiển thị *!*/
+/*.popup1.show .popup-content1 {*/
+/*    animation: slideIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards,*/
+/*    float 3s ease-in-out infinite 0.5s,*/
+/*    pulse 2s ease infinite 0.5s;*/
+/*}*/
