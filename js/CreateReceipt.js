@@ -6,6 +6,15 @@ let categoryList = JSON.parse(localStorage.getItem('category'));
 
 loadPage(1, foods);
 
+addBoxText(0);
+var addMethod = document.getElementById("addMethod");
+let j = 0;
+addMethod.addEventListener("click", function () {
+    j++;
+    addBoxText(j);
+})
+
+
 const emptyRecipe = {
 
     nutritionData: [
@@ -1202,15 +1211,6 @@ function showPopup(message, duration = 3000) {
 
 
 
-addBoxText(0);
-let addMethod = document.getElementById("addMethod");
-let j = 0;
-addMethod.addEventListener("click", function () {
-    j++;
-    addBoxText(j);
-
-
-})
 
 
 
