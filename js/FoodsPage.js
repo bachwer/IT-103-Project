@@ -144,12 +144,12 @@ creat.addEventListener("click", function () {
 
     function saveAllValues() {
         const inputs = main.querySelectorAll('input[type="text"]');
-        const unitValue = main.querySelectorAll(`Cholesterol1`);
+        // const unitValue = main.querySelectorAll(`Cholesterol1`);
 
         inputs.forEach(input => {
-            const key = input.getAttribute('data-key'); // Lấy key từ data-key
+            const key = input.getAttribute('data-key');
             let data = key.toString()
-            const value = input.value.trim(); // Lấy giá trị từ input (xóa khoảng trắng thừa)
+            const value = input.value.trim();
 
 
             if (!foodInput.nutritionData[key]) {
@@ -173,10 +173,6 @@ creat.addEventListener("click", function () {
             foodInput.nutritionData[key].unit = foods[0].nutritionData[key].unit;
         });
 
-
-
-
-
     }
 
 });
@@ -196,14 +192,9 @@ function removeInputStyles(element) {
 
 // load page
 function loadContentNutritionContent(i) {
-    let save = document.getElementById("save");
-    save.onclick = function () {
-        myModal.classList.remove("show");
-    }
-
-
     let main = document.getElementById("NutritionContent2");
     main.innerHTML = "";
+    let save = document.getElementById("save");
 
     let name = document.getElementById("FoodName");
     let source = document.getElementById("source");
@@ -260,47 +251,84 @@ function loadContentNutritionContent(i) {
         main.appendChild(box);
     }
 
-
     editBtn.addEventListener("click", function () {
-
+        const save = document.getElementById("save");
         const modal = document.getElementById("myModal");
-        if (userName === source.value) {
 
+        if (userName === source.value) {
             main.innerHTML = "";
 
+            // Create editable nutrition inputs
             for (let key in food.nutritionData) {
-
                 let box = document.createElement("div");
-
                 box.innerHTML = `
-                 <div class="NutritionValue">   
-                  <button>${food.nutritionData[key].name}</button>
-                    <input style=" background-color: #ffff;" type="text" value="${food.nutritionData[key].value}">
-                <div class="Cholesterol1">${food.nutritionData[key].unit}</div>
-                 </div>
+                <div class="NutritionValue">   
+                    <button>${food.nutritionData[key].name}</button>
+                    <input data-key="${key}" style="background-color: #ffff;" 
+                           type="text" value="${food.nutritionData[key].value}">
+                    <div class="Cholesterol1">${food.nutritionData[key].unit}</div>
+                </div>
             `;
                 main.appendChild(box);
-                status(false)
-
-
-
+                status(false);
             }
-        }else{
+        } else {
             modal.scrollTop = 0;
-            return 0;
+            return; // Exit early if user doesn't have permission
+        }
+    });
+
+    save.addEventListener("click", function () {
+        saveAllValues();
+        localStorage.setItem("foods", JSON.stringify(foods));
+        // Consider adding feedback to user that save was successful
+        myModal.classList.remove("show");
+    });
+
+    function saveAllValues() {
+        const inputs = main.querySelectorAll('input[type="text"]');
+
+        // Create array to store all nutrition values
+        const nutritionValues = [];
+
+        inputs.forEach(input => {
+            const key = input.getAttribute('data-key');
+            const value = input.value.trim();
+
+            // Add to array
+            nutritionValues.push({
+                key: key,
+                value: value,
+                unit: food.nutritionData[key]?.unit || ""
+            });
+
+            // Update food object
+            if (!food.nutritionData[key]) {
+                food.nutritionData[key] = {
+                    name: key,
+                    value: +value,
+                    unit: ""
+                };
+            } else {
+                food.nutritionData[key].value = +value;
+            }
+        });
+
+        // Preserve units from original data
+        if (foods.length > 0 && foods[0].nutritionData) {
+            Object.keys(foods[0].nutritionData).forEach(key => {
+                if (food.nutritionData[key]) {
+                    food.nutritionData[key].unit = foods[0].nutritionData[key].unit;
+                }
+            });
         }
 
 
 
-        //----------
+    }
 
 
 
-
-
-
-
-    });
 
 }
 
