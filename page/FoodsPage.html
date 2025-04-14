@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Page</title>
+</head>
+<link href="../css/style.css" rel="stylesheet">
+<link href="https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/cjauy3xmerrn469wrwk9" rel="icon"
+      type="image/x-icon">
+
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/a5e9eda380.js"></script>
+<body>
+
+<div id="menu-container"></div>
+<section class="MainFoods" id="MainHome">
+
+    <div class="MainFoodsPage">
+
+        <div class="titleMainPage">
+            <span class="titleMainPage1">Foods</span><br>
+            <span class="titleMainPage2">Search, consult and add new foods to the system</span>
+        </div>
+
+        <div class="Search_sort">
+            <input id="searchReceipt" placeholder="Search food" type="text">
+
+            <div class="flex">
+                <button class="btn-sort"><img alt="" height="19" src="../assets/sort.png" width="20"/>
+                </button>
+                <button id="Sort">Sort by nutrient</button>
+                <div class="dropdown">
+                    <button onclick="IncreaseFood()">Increase</button>
+                    <button onclick="Decrease()">Decrease</button>
+                    <button onclick="Fat()">Fat</button>
+                    <button onclick="Carbohydrate()">Carbohydrate</button>
+                    <button onclick="Protein()">Protein</button>
+                    <button onclick="Energy()">Energy</button>
+                </div>
+
+            </div>
+            <select id="CategoryReceipt">
+                <option value="">Category</option>
+
+
+            </select>
+
+
+
+
+        </div>
+        <div>
+            <div class="contentFoodsPage" id="contentFoodsPage">
+
+
+            </div>
+
+
+            <div class="contentFoods" id="CreateFood">
+                <div class="CreateFood" >
+                    <img alt="" height="19" src="../assets/create.png" width="19"/>
+                    <span>Create food</span>
+                </div>
+            </div>
+
+
+            <!---Modal-->
+            <div class="modal" id="myModal">
+
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="modal-header">
+                        <span class="modal-title">Food information</span>
+                        <p>Check and update the information about the food</p>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="foodInfo">
+                            <div class="foodName">
+                                <label for="FoodName">
+                                    <button>Name</button>
+                                </label><input id="FoodName" type="text" >
+
+                            </div>
+
+                            <div class="foodName">
+                                <label for="source">
+                                    <button>Source</button>
+                                </label><input id="source" placeholder="My foods" value="My foods" type="text" disabled>
+
+                            </div>
+
+                        </div>
+
+                        <div class="foodInfo">
+                            <div class="foodName">
+                                <label for="category">
+                                    <button>Category</button>
+                                </label><input id="category" placeholder="Select the food group" type="text" >
+                            </div>
+                            <div class="foodName">
+                                <label for="quantity">
+                                    <button>Quantity</button>
+                                </label><input id="quantity"  type="text"><span class="btnFake">Grams</span>
+
+                            </div>
+                        </div>
+                        <div>
+
+                            <div class="Nutrition">
+                                <span>Nutrition value per 100g</span>
+                            </div>
+                            <div class="NutritionTitle">
+                                <span>Macronutrients</span>
+
+
+                            <div class="Macronutrients">
+
+
+                                    <div class="NutritionValue1 ">
+                                        <button>Energy</button>
+                                        <input id="Energy"  type="text" disabled>
+                                        <div class="Cholesterol1">kcal</div>
+                                    </div>
+
+                                    <div class="NutritionValue1 ">
+                                        <button>Fat</button>
+                                        <input id="Fat"  type="text" disabled>
+                                        <div class="Cholesterol1">g</div>
+                                    </div>
+
+                                    <div class="NutritionValue1 ">
+                                        <button>Carbohydrate</button>
+                                        <input id="Carbohydrate"  type="text" disabled>
+                                        <div class="Cholesterol1">g</div>
+                                    </div>
+
+                                    <div class="NutritionValue1 ">
+                                        <button>Protein</button>
+                                        <input id="Protein"  type="text" disabled>
+                                        <div class="Cholesterol1">g</div>
+                                    </div>
+                            </div>
+
+                                <span>Macronutrients</span>
+
+
+
+                                <div class="" id="NutritionContent2">
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn-close">Cancel</button>
+                        <button id="edit" class="btn-close">Edit</button>
+                        <button id="save" class="btn-save">Save and Close</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!---END-->
+        </div>
+
+
+
+
+    </div>
+
+    <div class="Pagination" id="PaginationFoods">
+
+    </div>
+
+    </div>
+
+
+    <div class="FooterHomePage">
+
+    </div>
+
+</section>
+<script>
+    var namePage = "Food databases";
+    var namePage1 = "Create, check and update foods that you can use on meal plans";
+    var countPage = 2;
+
+</script>
+<script src="../js/DataLoadFirst.js"></script>
+
+
+
+<!--<script src="../js/dataReceipt.js"></script>-->
+<script src="../js/FoodsPage.js"></script>
+
+
+
+</body>
+</html>

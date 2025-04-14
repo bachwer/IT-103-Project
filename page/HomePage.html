@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <script src="../js/HomePage2.js"></script>
+</head>
+<link href="../css/style.css" rel="stylesheet">
+<link href="../css/HomePage.css" rel="stylesheet">
+<link href="https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/cjauy3xmerrn469wrwk9"
+      rel="icon"
+      type="image/x-icon">
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/a5e9eda380.js"></script>
+
+<body>
+<div class="notification" id="notification">
+    <img alt="icon" height="20" id="iconSuccess" src="../assets/iconSuccess.png" width="20"/>
+
+    <p id="textInPop"></p>
+</div>
+
+<div id="menu-container"></div>
+
+<section class="MainHome" id="MainHome">
+
+    <div class="MainHomePage">
+
+        <div class="titleMainPage">
+            <span class="titleMainPage1">Home Page</span><br>
+            <span class="titleMainPage2">page of your favorite receipts</span>
+        </div>
+
+        <div class="Search_sort">
+            <input id="search" placeholder="Search Recipes" type="text">
+
+            <div class="flex">
+                <button class="btn-sort"><img alt="" height="19" src="../assets/sort.png" width="20"/></button>
+                <button id="Sort">Sort by nutrient</button>
+                <div class="dropdown">
+                    <button onclick="Increase()">Increase</button>
+                    <button onclick="Decrease()"> Decrease</button>
+                    <button onclick="Fat()">Fat</button>
+                    <button onclick="Carbohydrate()">Carbohydrate</button>
+                    <button onclick="Protein()">Protein</button>
+                    <button onclick="Energy()">Energy</button>
+
+
+                </div>
+
+            </div>
+            <select id="Category">
+                <option value="">Category</option>
+
+
+            </select>
+        </div>
+
+        <button id="btnCommunity" class="btnCommunity">
+            <img src="../assets/iconCommunity.png" height="20" width="20"/>Community
+        </button>
+
+
+        <div class="contentHomePage" id="contentHomePage">
+
+        </div>
+
+
+        <div class="Pagination" id="Pagination">
+
+        </div>
+    </div>
+
+
+    <div class="FooterHomePage">
+
+
+    </div>
+
+
+</section>
+<script>
+    var namePage = "Home";
+    var namePage1 = "Show all your favorite receipts";
+    var countPage = 1;
+</script>
+
+
+<script src="../js/DataLoadFirst.js">
+
+
+
+</script>
+
+<script>
+
+
+    let pop = document.getElementById("notification");
+    let text = document.getElementById("textInPop");
+    let img = document.getElementById("iconSuccess");
+
+    if (localStorage.getItem("loginSuccess") === "true") {
+    pop.style.display = "flex";
+    pop.style.backgroundColor = "#E5FFF0";
+    pop.style.alignItems = "center";
+    pop.style.gap = "8px";
+    img.style.display = "block";
+    text.innerText = "Đăng nhập thành công";
+
+    setTimeout(() => {
+    pop.style.display = "none";
+    img.style.display = "none";
+    }, 2000);
+
+    localStorage.removeItem("loginSuccess");
+    }
+
+</script>
+
+
+
+
+
+<script src="../js/HomePage2.js"></script>
+
+<script>   let categoryLocal = JSON.parse(localStorage.getItem("category"));
+let Category1 = document.getElementById("Category");
+
+for (let i = 0; i < categoryLocal.length - 1; i++) {
+    let option = document.createElement("option");
+    option.text = categoryLocal[i];
+    option.value = categoryLocal[i];
+    Category1.appendChild(option);
+}
+
+</script>
+
+
+
+
+</body>
+</html>

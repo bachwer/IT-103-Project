@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <title>Receipt Page</title>
+
+</head>
+
+<link href="../css/style.css" rel="stylesheet">
+<link href="../css/HomePage.css" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/cjauy3xmerrn469wrwk9">
+
+
+
+
+
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/a5e9eda380.js"></script>
+
+<body>
+
+<div id="menu-container"></div>
+<section class="MainHome" id="MainHome">
+
+  <div class="MainHomePage" >
+
+   <div class="titleMainPageBox">
+     <div class="titleMainPage">
+       <span class="titleMainPage1">Recipes</span><br>
+       <span class="titleMainPage2">Create, check and update recipes</span>
+     </div>
+
+     <div id="addReceipt">
+       <img src="../assets/add.png" height="18" width="18" alt=""/>
+     </div>
+   </div>
+
+      <div class="Search_sort">
+          <input id="search" type="text" placeholder="Search Recipes">
+
+          <div class="flex">
+              <button class="btn-sort"><img src="../assets/sort.png" height="19" width="20" alt=""/></button>
+              <button id="Sort">Sort by nutrient</button>
+              <div class="dropdown">
+                  <button onclick="Increase()" >Increase</button>
+                  <button onclick="Decrease()">Decrease</button>
+                  <button onclick="Fat()">Fat</button>
+                  <button onclick="Carbohydrate()">Carbohydrate</button>
+                  <button onclick="Protein()">Protein</button>
+                  <button onclick="Energy()">Energy</button>
+              </div>
+
+          </div>
+          <select id="Category">
+              <option value="">All</option>
+
+          </select>
+
+
+
+
+
+
+
+
+      </div>
+
+    <div class="checkbox">
+      <button id="Favorites"><i class="fa-solid fa-heart"></i> Favorites <span id="numFavorites"> 0</span></button>
+      <div class="inputCheckbox">
+            <input type ="checkbox" name = "receipt" id = "receipt">
+
+          <img src="../assets/border_color.png" height="14" width="14" alt=""/>
+          <span>My recipes</span>
+      </div>
+    </div>
+
+    <div class="contentHomePage" id="contentHomePage">
+
+    </div>
+
+
+
+
+    <div class="Pagination" id="Pagination">
+
+    </div>
+  </div>
+
+
+
+  <div class="FooterHomePage">
+
+
+  </div>
+
+</section>
+
+
+<script>
+    var namePage = "Recipes";
+    var namePage1 = "Create, check and update recipes";
+    var countPage = 3;
+
+</script>
+<script src="../js/DataLoadFirst.js"></script>
+<!--<script src="../js/dataReceipt.js"></script>-->
+
+
+
+
+
+
+
+
+
+
+<script src="../js/HomePage.js"></script>
+<script src="../js/ReceiptPage.js"></script>
+</body>
+</html>

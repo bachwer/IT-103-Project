@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Receipt Page</title>
+</head>
+<link href="../css/style.css" rel="stylesheet">
+<link href="../css/HomePage.css" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/cjauy3xmerrn469wrwk9">
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/a5e9eda380.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+<body>
+
+<div id="menu-container"></div>
+<section class="informationReceipt" id="MainHome">
+
+  <div class="imgReceiptContainer1" id="imgReceiptContainer1">
+    <div class="imgReceipt">
+      <div class="titleBar11">
+        <img src="../assets/border_color.png" alt="">
+        <span style="color: #2BA0CC">My Receipt</span>
+      </div>
+
+      <button id="btnHeart"><i class="fa-regular fa-heart"></i>0</button>
+    </div>
+    <button id="tag1">
+
+      <img src="../assets/new-label.svg.png" height="15" width="18" alt=""/>
+      <input id="NewCategory" type="text" placeholder="New Category">
+
+    </button>
+
+    <button id="tag">
+
+      <img src="../assets/new-label.svg.png" height="49" width="48" alt=""/>
+      New category
+    </button>
+
+    <div id="categoryMenu" class="dropdown-menu">
+      <ul id="categoryMenuList">
+
+      </ul>
+    </div>
+    <div id="popupMessage" class="popup1">
+      <div class="popup-content1">
+        <p id="popupText"></p>
+      </div>
+    </div>
+
+
+
+
+
+
+    <button onclick="createImageUploadPopup()" id="tagAddImg">
+
+      <i class="fa-solid fa-image"></i>
+      New Image
+    </button>
+
+  </div>
+
+
+  <div class="CreateContainer">
+
+    <div class="createContainer1">
+     <div>
+       <span class="span1" >Publish recipe</span><br>
+       <span class="span2">Publish your recipe on your website or share it with the Nutrium community</span>
+     </div>
+      <button id="AddRecipe">Publish</button>
+
+
+
+
+
+
+
+    </div >
+
+
+
+    <div class="full">
+      <span>Basic information</span>
+      <p>Check and edit recipe's basic information</p>
+
+
+
+      <div class="informationReceiptContainerValue">
+        <div class="NutritionValue3">
+          <button>Name</button>
+          <div class="value1">
+            <input type="text" id="recipeName" placeholder="Recipe">
+            <div class="box"><img src="../assets/edit.png" height="18" width="18" alt=""/></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="NutritionValue3">
+        <button>Description</button>
+        <div class="value1">
+          <input type="text" id="description">
+          <div class="box"><img src="../assets/edit.png" height="18" width="18" alt=""/></div>
+        </div>
+      </div>
+
+      <div class="NutritionValue3">
+        <button>Total time</button>
+        <div class="value1">
+          <input type="text" id="totalTime">
+          <div class="box"><img src="../assets/edit.png" height="18" width="18" alt=""/></div>
+        </div>
+      </div>
+
+      <div class="NutritionValue3">
+        <button>Preparation time</button>
+        <div class="value1">
+          <input type="text" id="prepTime">
+          <div class="box"><img src="../assets/edit.png" height="18" width="18" alt=""/></div>
+        </div>
+      </div>
+
+      <div class="NutritionValue3">
+        <button>Final weight</button>
+        <div class="value1">
+          <input type="text" id="finalWeight" placeholder="201 grams">
+          <div class="box"><img src="../assets/edit.png" height="18" width="18" alt=""/></div>
+        </div>
+      </div>
+
+      <div class="NutritionValue3">
+        <button>Portions</button>
+        <div class="value1">
+          <input type="text" id="portions">
+          <div class="box"><img src="../assets/edit.png" height="18" width="18" alt=""/></div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+  </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+  <div class="container1">
+
+    <span class="span1">Creation</span>
+    <span class="span2">Create the recipe and choose the ingredients</span>
+
+  </div>
+
+  <section class="informationReceipt2" id="">
+
+    <div class="informationReceiptContainer2" >
+
+
+
+      <div class="informationReceiptContainerValue1" >
+        <span class="span1">Ingredients</span><br>
+        <span class="span2">Search and add ingredients to the recipe</span>
+<!------- -->
+       <div id="contentCreatValue">
+
+         <!------- -->
+<!--         <div class="padding">-->
+<!--           <div class="InPadding">-->
+<!--             <div class="recipe-item" >-->
+<!--               <div class="item-container">-->
+<!--                 <div class="item-info">-->
+<!--                   <span class="item-text">1 serving of babyfood, water, bottled, GERBER, without added fluoride (113 g)</span>-->
+<!--                 </div>-->
+<!--                 <button class="btnDel"><img src="../assets/delete.png" height="18" width="14" alt=""/></button>-->
+<!--               </div>-->
+<!--             </div>-->
+<!--           </div>-->
+<!--         </div>-->
+
+         <!------- -->
+
+        </div>
+        <div id="deletePopup" class="popup">
+          <div class="popup-content">
+            <p>Bạn có chắc chắn muốn xóa không?</p>
+            <button id="confirmDelete">Xóa</button>
+            <button id="cancelDelete">Hủy</button>
+          </div>
+        </div>
+        <!------- -->
+        <!------- -->
+        <div class="padding">
+          <div class="recipe-item" id="recipeItem">
+            <div class="add-item">
+              <button class="add-btn">
+
+                <img id="imgRow" src="../assets/keyboard_arrow_up.png" height="16" width="22" alt=""/> <span>&nbsp;&nbsp; Add new food equivalent</span>
+              </button>
+            </div>
+          </div>
+
+
+          <div id = "boxContainerReceipt">
+            <div class="Search_sort">
+              <input id="searchReceipt" placeholder="Search food" type="text">
+
+              <div class="flex">
+                <button class="btn-sort"><img alt="" height="19" src="../assets/sort.png" width="20">
+                </button>
+                <button id="Sort">Sort by nutrient</button>
+                <div class="dropdown">
+                  <button onclick="Increase()">Increase</button>
+                  <button onclick="Decrease()">Decrease</button>
+                  <button onclick="Fat()">Fat</button>
+                  <button onclick="Carbohydrate()">Carbohydrate</button>
+                  <button onclick="Protein()">Protein</button>
+                  <button onclick="Energy()">Energy</button>
+
+
+                </div>
+
+              </div>
+              <select id="CategoryReceipt">
+                <option value="">Category</option>
+                <option value="Fruit">Fruit</option>
+                <option value="Meat">Meat</option>
+                <option value="Grain">Grain</option>
+                <option value="Seafood">Seafood</option>
+                <option value="Dairy">Dairy</option>
+                <option value="Vegetable">Vegetable</option>
+                <option value="Nut/Seed">Nut/Seed</option>
+                <option value="Legume">Legume</option>
+
+              </select>
+            </div>
+
+
+            <div class="addSomething">
+
+
+
+              <div class="row1">
+               <span>Nutritional Information</span>
+
+                <div class="btn1">
+                  <button>Energy</button>
+                  <button>Fat</button>
+                  <button>Carboh…</button>
+                  <button>Protein</button>
+
+                </div>
+              </div>
+
+              <div id="containerAddFood">
+
+
+              </div>
+              <div class="Pagination1" id="PaginationFoods">
+
+              </div>
+
+
+
+            </div>
+          </div>
+
+        </div>
+        <!------- -->
+
+
+
+
+
+      </div>
+
+
+      <div class="informationReceiptContainerValue2 " >
+        <div class="boxPM">
+          <div>
+            <span class="span1">Cooking method</span><br>
+            <span class="span2">Give instructions to prepare this recipe</span>
+          </div>
+
+          <div class="addMethod" id="addMethod">
+
+            <img src="../assets/add.png" height="20" width="20"/>
+          </div>
+
+        </div>
+
+
+        <div id="informationReceiptContainerValue2Box">
+
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+    <div class="imgReceiptContainer2" >
+
+      <div class="imgReceiptContainer21" >
+        <span class="span1">Global analysis per portion</span><br>
+        <span class="span2">Energy, macronutrients and fiber distribution</span>
+
+        <div class="imgReceiptContainer23Value border">
+          <span class="border1">Energy </span>
+          <span class="border1"> <span style="font-weight: bold;" id="kcal">  </span >  kcal</span>
+        </div>
+
+
+        <div class="imgReceiptContainer23ValueCircle">
+          <div class="circle2 color0" id="fat1">
+            <div class="circle1">
+              <span ><span id="fat"></span>g</span>
+              <span class="text">Fat</span>
+
+            </div>
+          </div>
+          <div class="circle2 color0" id="Carbohydrate1">
+            <div class="circle1">
+
+              <span><span id="Carbohydrate"> </span>g</span>
+              <span class="text">Carbohydrate</span>
+
+            </div>
+          </div>
+          <div class="circle2 color0" id="Protein1">
+            <div class="circle1">
+
+              <span><span id="Protein"></span>g</span>
+              <span class="text">Protein</span>
+
+            </div>
+          </div>
+
+          <div class="circle2 color0" id="fiber1">
+            <div class="circle1">
+
+              <span><span id="fiber"></span>g</span>
+              <span class="text">Fiber</span>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="imgReceiptContainer22" >
+        <span class="span1">Micronutrients per portion</span><br>
+        <span class="span2">Micronutrients distribution of the recipe</span>
+
+        <canvas id="myChart" class="myChart"></canvas>
+
+        <div class="legend">
+          <div class="legend-box fat"></div> Fat
+          <div class="legend-box carb"></div> Carbohydrate
+          <div class="legend-box protein"></div> Protein
+        </div>
+
+
+      </div>
+
+      <div class="imgReceiptContainer23" >
+        <span class="span1">Micronutrients per portion</span><br>
+        <span class="span2">Micronutrients distribution of the recipe</span>
+
+
+        <div class="imgReceiptContainer23ValueTotal" id="imgReceiptContainer23ValueTotal">
+
+        </div>
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+    </div>
+
+
+
+
+  </section>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  var namePage = "Recipes";
+  var namePage1 = "Create, check and update recipes";
+  var countPage = 3;
+
+</script>
+<script src="../js/DataLoadFirst.js"></script>
+<!--<script src="../js/dataReceipt.js"></script>-->
+<!--<script src="../js/HomePage.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+<!--<script src="../js/FoodsPage.js"></script>-->
+<script src="../js/CreateReceipt.js"></script>
+
+<script>
+
+
+</script>
+
+
+</body>
+</html>

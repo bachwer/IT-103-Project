@@ -1,0 +1,591 @@
+.full{
+    width: calc(100% - 40px);
+    background-color: #ffff;
+    height: auto;
+    border-radius: 5px;
+    padding: 20px 20px;
+
+}
+
+.full span{
+    font-size: 20px;
+    color: #676A6C;
+    line-height: 0;
+}
+
+.full p{
+    font-size: 12px;
+    color: #888888;
+    font-weight: lighter;
+    line-height: 0;
+
+}
+.CreateContainer{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.NutritionValue3.value1{
+    display: flex;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+.createContainer1{
+    width: calc(100% - 20px);
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    align-items: center;
+    margin-bottom: 20px;
+
+
+}
+.createContainer1 button{
+    width: 74px;
+    height: 34px;
+    border:none;
+    background-color: #1AB394;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.createContainer1 button:hover{
+    background-color: #1a977d;
+}
+
+.createContainer1 .span1{
+    color: #676A6C;
+    line-height: 0;
+}
+.createContainer1 .span2 {
+    color: #888888;
+    line-height: 0;
+
+}
+.value1{
+    height: 42px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.value1 input{
+    width: 100%;
+    height: 40px;
+    border: none;
+}
+.box{
+    align-items: center;
+    display: flex;
+    padding: 8px;
+    background-color: #FAFAFB;
+    border-left: 1px solid #EEEEEE;
+}
+.colorBlue{
+    color: #2BA0CC;
+}
+.imgReceiptContainer1 {
+    width: 30%;
+    height: 400px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+.imgReceiptContainer1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+.informationReceiptContainerValue2Box input{
+    border: none;
+    width: 100%;
+}
+.height{
+    height: 42px;
+}
+
+
+.recipe-item {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    border: 1px solid #e0e0e0;
+
+}
+
+.item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+}
+
+.item-text {
+    font-size: 13px;
+    color: #585858;
+    font-weight: 600;
+;
+
+}
+
+
+
+.add-item {
+    padding: 15px 20px;
+}
+
+.add-btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: #2ca45e;
+    cursor: pointer;
+    padding: 0;
+}
+
+.add-btn svg {
+    margin-right: 10px;
+}
+.item-container button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6%;
+    height: 100%;
+    border: none;
+}
+#myChart {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    margin: 0 auto;
+    left: 50%;
+    top: 60px;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 1000;
+
+
+}
+
+.addSomething{
+    width: 100% ;
+    padding: 2px;
+    height: auto;
+    position: relative;
+
+}
+.btn1{
+    display: flex;
+}
+.row1{
+    display: flex;
+    justify-content: space-between  ;
+    border: 1px solid #eeeeee;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 53px;
+}
+
+.contentRow1{
+
+}
+.btn1 button{
+    width: 75px;
+    border: 1px solid #eeeeee;
+    background-color: #FAFAFB;
+    height: 53px;
+    font-size: 13px;
+    color: #282828;
+}
+.btn2{
+    display: flex;
+    height: 100px;
+}
+.row2{
+    display: flex;
+    justify-content: space-between  ;
+    border: 1px solid #eeeeee;
+    align-items: center;
+    padding-left: 10px;
+    height: 100px;
+}
+
+.btn2 button{
+    width: 75px;
+    border:none;
+    background-color: #FFFFFF;
+    height: auto;
+    padding: 15px;
+    font-size: 13px;
+    color: #282828;
+}
+#addBtn2 {
+    background: #FFFFFF;
+    border: none;
+    width: 15%;
+    color: #fff;
+    position: relative;
+    left: -100%;
+    transition: all 0.3s ease;
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        left: -100%; /* Vị trí bắt đầu */
+    }
+    to {
+        left: 0; /* Vị trí kết thúc */
+    }
+}
+
+.row2:hover #addBtn2 {
+    background: #1AB394;
+    cursor: pointer;
+    color: #FFFFFF;
+    animation: slideIn 0.5s forwards; /* Kích hoạt lại hiệu ứng */
+}
+
+.row2:hover .btn2 button{
+    background-color: #FAFAFB;
+}
+.row2:hover{
+    background-color: #FAFAFB;
+}
+
+
+
+
+
+
+.row2Text{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.btn21{
+    margin-top: 5px;
+    display: flex;
+    width: 100%;
+}
+.btn21 button{
+    border: 1px solid #EEEEEE;
+    color: #282828;
+    font-size: 13px;
+    padding: 8px;
+    background-color: #FFFFFF;
+}
+.btn111{
+    width: 15%;
+}
+.btn24{
+    width: 70%;
+}
+.NutritionValue3 button{
+    text-align: start;
+    color: #676A6C;
+}
+.NutritionValue3 input:hover{
+    background-color: #FAFAFB;
+
+}
+
+#recipeName::placeholder{
+    padding-left: 15px;
+    font-size: 13px;
+    color: #676A6C;
+}
+#finalWeight::placeholder{
+    padding-left: 15px;
+    font-size: 13px;
+    color: #888888;
+    font-style: italic;
+}
+.row1 span{
+    font-size: 13px;
+    color: #282828;
+}
+
+.row2Text .span1{
+    font-size: 13px;
+    color: #282828;
+}
+
+.row2Text .span2{
+    font-size: 11px;
+    color: #282828;
+    font-weight: lighter;
+}
+.add-item span{
+    color: #676A6C;
+    font-size: 13px;
+}
+.informationReceiptContainer2{
+    position: relative;
+}
+#containerAddFood{
+    padding-bottom: 50px;
+}
+.btnDel{
+    height: 40px;
+    cursor: pointer;
+}
+
+.btnDel img {
+    filter: grayscale(100%); /* Ảnh xám mặc định */
+    transition: filter 0.3s ease-in-out; /* Hiệu ứng mượt khi đổi màu */
+}
+
+.btnDel:hover {
+    img{
+        filter: grayscale(0%) brightness(1) sepia(100%) hue-rotate(-50deg) saturate(500%);
+    }
+
+}
+
+.popup {
+    display: none; /* Ẩn mặc định */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.popup-content button {
+    margin: 10px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+#confirmDelete {
+    background: red;
+    color: white;
+}
+
+#cancelDelete {
+    background: gray;
+    color: white;
+}
+
+.Pagination1{
+    position: absolute;
+    margin-top: 100px;
+    right: 10px;
+    bottom: 0;
+    display: flex;
+}
+
+
+
+
+
+.dropdown-menu {
+    display: none; /* Ẩn menu mặc định */
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 150px; /* Giữ chiều rộng */
+    max-height: 120px; /* 🔥 Giới hạn chiều cao */
+    overflow-y: auto; /* 🔥 Thêm thanh cuộn khi nội dung quá dài */
+    padding: 5px;
+    font-size: 12px;
+    bottom: 30px;
+    left: 50px;
+}
+
+/* Tùy chỉnh thanh cuộn (chỉ hiển thị khi cần) */
+.dropdown-menu::-webkit-scrollbar {
+    width: 5px; /* 🔥 Mỏng hơn */
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+    background: #ccc; /* 🔥 Màu thanh cuộn */
+    border-radius: 5px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb:hover {
+    background: #999; /* Màu đậm hơn khi hover */
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    padding: 5px;
+    font-size: 12px;
+}
+
+.dropdown-menu li:hover {
+    background: #e0e0e0;
+}
+
+#tag1{
+    position: absolute;
+    bottom: 70px;
+    left: 20px;
+    padding: 4px 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #444;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100px;
+}
+
+#tag1 input{
+    border: none;
+    width: 100%;
+}
+#tag1:hover{
+    width: 200px;
+}
+
+
+/* 🎯 Cấu trúc popup */
+.popup1 {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    z-index: 1000;
+    max-width: 320px;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    display:none;
+
+}
+
+.popup-content1 {
+    padding: 18px 22px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+    border-left: 5px solid #aa0e0e;
+    animation: slideIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+    float 3s ease-in-out infinite 0.5s;
+    transform: translateX(-120%);
+    opacity: 0;
+}
+/* ✨ Keyframes chính */
+@keyframes slideInPopup {
+    from {
+        transform: translateX(-150%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes floatPopup {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes pulsePopup {
+    0% { border-left-width: 5px; }
+    50% { border-left-width: 8px; }
+    100% { border-left-width: 5px; }
+}
+
+/* 🎩 Hiệu ứng khi hiển thị */
+.popup1.show .popup-content1 {
+    animation: slideInPopup 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+    floatPopup 3s ease-in-out infinite,
+    pulsePopup 2s ease infinite;
+}
+
+/* 💫 Hiệu ứng ẩn */
+@keyframes slideOutPopup {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-150%);
+        opacity: 0;
+    }
+}
+
+.popup1.hide .popup-content1 {
+    animation: slideOutPopup 0.4s cubic-bezier(0.55, 0.06, 0.68, 0.19) forwards;
+}
+
+/* 📝 Nội dung văn bản */
+.popup-content1 p {
+    margin: 0;
+    color: #444;
+    font-size: 15px;
+    line-height: 1.5;
+    animation: textFadeInPopup 0.6s ease-out 0.2s both;
+}
+
+@keyframes textFadeInPopup {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.boxPM {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.addMethod{
+    cursor: pointer;
+
+}
+
+.imgBox:hover {
+    cursor: pointer;
+        filter: grayscale(0%) brightness(1) sepia(100%) hue-rotate(-50deg) saturate(500%);
+
+
+
+}

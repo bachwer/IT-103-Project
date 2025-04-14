@@ -1,0 +1,128 @@
+#searchReceipt{
+    width: 55%;
+    height: 34px;
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+}
+#CategoryReceipt{
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    width: 20%;
+    height: 34px
+
+}
+
+#CategoryReceipt:hover{
+    background-color: #f8f5f5;
+}
+#searchReceipt:hover{
+    background-color: #f8f5f5;
+}
+
+
+
+#CategoryReceipt::placeholder{
+    padding-left: 13px;
+    color: #555555;
+}
+#searchReceipt::placeholder {
+    padding-left: 13px;
+}
+.titleMainPageBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#addReceipt{
+    cursor: pointer;
+}
+
+#addReceipt:hover{
+    width: 20px;
+    height: 20px;
+}
+#Favorites{
+    width: 115px;
+    height: 32px;
+    border: 1px solid #EEEEEE;
+    background-color: #FFFFFF;
+
+    border-radius: 3px;
+    cursor: pointer;
+}
+#Favorites:hover{
+    width: 118px;
+    height: 38px;
+    background-color: #fbf6f6;
+}
+
+#Favorites i {
+    color: #CC5965;
+}
+.checkbox{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 8px;
+    margin-top: 24px;
+    padding-right: 8px;
+    align-items: center;
+
+}
+.flex1{
+    display: flex;
+    width: 20%;
+}
+.flex1 #CategoryReceipt{
+    width: 80%;
+}
+.flex1 .btn-sort{
+    border: 1px solid #EEEEEE;
+    border-left: none
+}
+#Sort{
+    border-left: none;
+}
+.btn-sort{
+    border: 1px solid #EEEEEE;
+}
+#receipt {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #2BA0CC;
+    border-radius: 1.6px;
+    cursor: pointer;
+    background-color: white;
+    position: relative; /* Đảm bảo dấu tích căn chỉnh đúng */
+}
+
+#receipt:checked {
+    background-color: #2BA0CC;
+}
+
+#receipt:checked::after {
+    content: "✔"; /* Dấu tích */
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+.inputCheckbox{
+    display: flex;
+    gap: 5px;
+}
+.inputCheckbox span{
+    color: #2BA0CC;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 2px;
+}
+.inputCheckbox img{
+    margin-top: 2px;
+}
+
+
+
